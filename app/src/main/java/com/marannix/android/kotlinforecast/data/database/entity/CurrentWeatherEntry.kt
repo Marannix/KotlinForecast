@@ -1,11 +1,16 @@
 package com.marannix.android.kotlinforecast.data.database.entity
 
 
+import androidx.room.Embedded
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-@Entity (tableName = "current_weather")
+const val CURRENT_WEATHER_ID = 0
+
+@Entity(tableName = "current_weather")
 data class CurrentWeatherEntry(
+    @Embedded(prefix = "condition_")
     val condition: Condition,
     @SerializedName("feelslike_c")
     val feelslikeC: Double,
@@ -36,4 +41,7 @@ data class CurrentWeatherEntry(
     val windKph: Double,
     @SerializedName("wind_mph")
     val windMph: Double
-)
+) {
+    @PrimaryKey(autoGenerate = false)
+    var id: Int = CURRENT_WEATHER_ID
+}
