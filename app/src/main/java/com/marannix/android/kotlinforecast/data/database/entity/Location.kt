@@ -1,4 +1,4 @@
-package com.marannix.android.kotlinforecast.data.response
+package com.marannix.android.kotlinforecast.data.database.entity
 
 
 import com.google.gson.annotations.SerializedName

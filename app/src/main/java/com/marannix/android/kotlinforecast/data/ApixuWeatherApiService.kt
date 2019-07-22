@@ -1,7 +1,7 @@
 package com.marannix.android.kotlinforecast.data
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.marannix.android.kotlinforecast.data.response.CurrentWeatherResponse
+import com.marannix.android.kotlinforecast.data.network.response.CurrentWeatherResponse
 import kotlinx.coroutines.Deferred
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -10,9 +10,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-const val API_KEY = ""
+const val API_KEY = "41aa04c918a6461095d152606191907"
 
-//http://api.apixu.com/v1/current.json?key=&q=london&lang=en
+//http://api.apixu.com/v1/current.json?key=41aa04c918a6461095d152606191907&q=london&lang=en
 
 interface ApixuWeatherApiService {
 
