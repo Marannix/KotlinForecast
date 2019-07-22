@@ -15,7 +15,7 @@ data class ImperialCurrentWeatherEntry(
     override val windDirection: String,
     @ColumnInfo(name = "precipIn")
     override val precipitationVolume: String,
-    @ColumnInfo(name = "feelsLikeF")
+    @ColumnInfo(name = "feelslikeF")
     override val feelsLikeTemperature: Double,
     @ColumnInfo(name = "visMiles")
     override val visibilityDistance: Double
